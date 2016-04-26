@@ -1,0 +1,25 @@
+<html>
+  <h1>
+    ¡picoso!
+  </h1>
+
+  <h2>
+    Los Chiles:
+  </h2>
+  <table>
+    <tr>
+      <th>Chile</th>
+      <th>Aroma</th>
+      <th>Taste</th>
+      <th>Heat</th>
+    </tr>
+    <% @chiles.each do |chile| %>
+    <tr>
+      <td><%= chile %></td>
+      <td></td>
+      <td></td>
+      <td></td>
+    </tr>
+  <% end %>
+  </table>
+</html>
