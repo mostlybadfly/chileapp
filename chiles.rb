@@ -1,21 +1,11 @@
 require 'sinatra'
+require 'csv'
 
-class Chile
-  attr_accessor :name, :flavor, :heat
-
-  def initialize(name, flavor, heat)
-    @name = name
-    @flavor = flavor
-    @heat = heat
-  end
-
-  def to_json
-    {name: @name, flavor: @flavor, heat: @head}.to_json
-  end
-end
+Chile = Struct.new(:name, :flavor, :heat)
+csv = CSV.read('chiles.csv')
+csv.shift
 
 get '/' do
-  @chiles = %w(Guajillo Ancho Mulato Serrano Jalapeño Habanero Árbol Piquin
-               Piquín Cascabel Pasilla Poblano)
+  @chiles = csv.map { |row| Chile.new(row[0], row[1], row[2]) }
   erb :index
 end

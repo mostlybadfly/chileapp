@@ -9,16 +9,14 @@
   <table>
     <tr>
       <th>Chile</th>
-      <th>Aroma</th>
-      <th>Taste</th>
+      <th>Flavor</th>
       <th>Heat</th>
     </tr>
     <% @chiles.each do |chile| %>
     <tr>
-      <td><%= chile %></td>
-      <td></td>
-      <td></td>
-      <td></td>
+      <td><%= chile.name %></td>
+      <td><%= chile.flavor %></td>
+      <td><%= chile.heat %></td>
     </tr>
   <% end %>
   </table>
