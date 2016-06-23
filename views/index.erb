@@ -1,23 +1,48 @@
+<!DOCTYPE html>
 <html>
-  <h1>
-    ¡picoso!
-  </h1>
-
-  <h2>
-    Los Chiles:
-  </h2>
-  <table>
-    <tr>
-      <th>Chile</th>
-      <th>Flavor</th>
-      <th>Heat</th>
-    </tr>
-    <% @chiles.each do |chile| %>
-    <tr>
-      <td><%= chile.name %></td>
-      <td><%= chile.flavor %></td>
-      <td><%= chile.heat %></td>
-    </tr>
-  <% end %>
-  </table>
+  <head>
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+  </head>
+  <body>
+    <nav class="navbar navbar-default">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="navbar-brand" href="#">
+            <img alt="Picoso" src"public/img/chiles.png">
+          </a>
+        </div>
+    </nav>
+    <h1 class="text-center">
+      ¡picoso!
+    </h1>
+    <div class="container">
+      <div class="jumbotron">
+      <h2>
+        Los Chiles:
+      </h2>
+      <table>
+        <tr>
+          <th>Chile</th>
+          <th>Flavor</th>
+          <th>Heat</th>
+        </tr>
+        <% @chiles.each do |chile| %>
+        <tr>
+          <td><%= chile.name %></td>
+          <td><%= chile.flavor %></td>
+          <td><%= chile.heat %></td>
+        </tr>
+      <% end %>
+      </table>
+      </div>
+    </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+  </body>
 </html>
