@@ -1,0 +1,27 @@
+.table td {
+  text-align: center;
+}
+
+.table th {
+  text-align: center;
+}
+
+.navbar-brand {
+  height: 75px;
+  width: 75px;
+}
+
+.navbar-brand img {
+  height: 100%;
+  width: auto;
+}
+
+.container .jumbotron{
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
+
+.site-title {
+  padding-top: 0px;
+  padding-bottom: 10px;
+}
